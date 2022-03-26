@@ -1,0 +1,176 @@
+@use '../utils/variables' as *;
+@use '../utils/mixin.scss' as *;
+
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter&family=Lexend+Deca&display=swap");
+
+
+
+
+
+.container {
+  @include flexCenter(column);
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: white;
+
+  @include lgScreen {
+    flex-direction: row;
+  }
+}
+
+.svg__image {
+  margin: 45px 0 0 45px;
+}
+.items {
+  width: 19rem;
+}
+
+.heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: larger;
+  color: $heading;
+  margin-left: 50px;
+  margin-top: 31px;
+}
+
+.description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  text-align: left;
+  margin: 28px 20px 0 46.5px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+
+  p {
+    line-height: 1.6rem;
+    color: $transperent-white;
+  }
+}
+
+.btn {
+  margin-top: 1.7rem;
+  margin-left: 3.1rem;
+  width: 9rem;
+  height: 3rem;
+  padding-bottom: 2rem;
+  border-radius: 25px;
+  border: none;
+  background-color: $heading;
+  padding-top: 11px;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+}
+
+
+
+.sedans {
+  margin-top: 90px;
+  background-color: $bright-orange;
+  min-width: 327px;
+  min-height: 444px;
+
+  .btn {
+    color: $bright-orange;
+  }
+  .btn:hover{
+    border: 2px solid $transperent-white;
+    background-color: $bright-orange;
+    color:$heading
+  }
+  
+  .btn:active{
+    background-color: white;
+    color:$bright-orange
+  }
+
+  @include smScreen {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  @include lgScreen {
+    margin-top: 0;
+
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 0;
+
+    height: 31rem;
+    min-width: 19rem;
+
+    .btn {
+      margin-top: 5rem;
+    }
+  }
+}
+.suvs {
+  background-color: $dark-cyan;
+  min-width: 327px;
+  min-height: 444px;
+
+  .btn {
+    color: $dark-cyan;
+  }
+  .btn:hover{
+    border: 2px solid $transperent-white;
+    background-color: $dark-cyan;
+    color:$heading
+  }
+  .btn:active{
+    background-color: white;
+    color:$dark-cyan
+  }
+  
+
+  @include lgScreen {
+    margin-top: 0;
+    height: 31rem;
+    min-width: 19rem;
+    .btn {
+      margin-top: 5rem;
+    }
+  }
+}
+
+.luxury {
+  background-color: $very-dark-cyan;
+  margin-bottom: 90px;
+  min-width: 327px;
+  min-height: 441px;
+
+  .btn {
+    color: $very-dark-cyan;
+    
+  }
+  .btn:hover{
+    border: 2px solid $transperent-white;
+    background-color: $very-dark-cyan;
+    color:$heading
+  }
+  
+  .btn:active{
+    background-color: white;
+    color:$very-dark-cyan
+  }
+  @include smScreen {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  @include lgScreen {
+    margin-bottom: 0;
+    height: 31rem;
+    min-width: 19rem;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+
+    .btn{
+      margin-top: 5rem;
+    }
+    
+  }
+}

@@ -1,0 +1,18 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin lgScreen {
+    @media screen and (min-width: 700px) {
+      @content;
+    }
+  }
+  
+  @mixin smScreen {
+    @media screen and (min-width: 300px) {
+      @content;
+    }
+  }
